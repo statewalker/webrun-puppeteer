@@ -25,7 +25,8 @@
     "@types/chrome": "^0.0.254",
     "puppeteer-core": "^13.7.0",
     "typescript": "^5.3.3",
-    "vite": "^5.0.6"
+    "vite": "^5.0.6",
+    "vitest": "^1.0.2"
   },
   "repository": {
     "type": "git",
@@ -34,8 +35,8 @@
   "scripts": {
     "eslint": "eslint src",
     "build": "vite build",
-    "test": "mocha -R spec ./test/index.js && yarn eslint",
-    "prepublishOnly": "rm -rf dist && yarn test && yarn rollup"
+    "test": "vitest --dir test --run",
+    "prepublishOnly": "rm -rf dist && yarn test && yarn build"
   },
   "sideEffects": false,
   "publishConfig": {

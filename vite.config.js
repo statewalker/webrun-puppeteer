@@ -33,7 +33,7 @@ export default ({mode}) => {
           api: resolve('./src/index.ts'),
         },
         formats: ["es"],
-        fileName: (format:string, entryName):string => `index.js`
+        fileName: (format, entryName) => `index.js`
       }
     },
   });
