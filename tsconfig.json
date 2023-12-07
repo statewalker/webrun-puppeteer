@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "rootDir": ".",
+    "outDir": "build",
+    "esModuleInterop": false,
+    "lib": ["es2020", "es2019", "es2018", "es2017", "dom"],
+    "target": "es2020",
+    "allowSyntheticDefaultImports": false
+  },
+  "include": [
+    "src/**/*.ts",
+    "test/**/*.ts"
+  ]
+}

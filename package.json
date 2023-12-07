@@ -1,0 +1,44 @@
+{
+  "name": "@statewalker/webrun-puppeteer",
+  "version": "0.0.1",
+  "description": "Puppeteer adapter for the WebRun DevTools Chrome Extension",
+  "keywords": [],
+  "homepage": "https://github.com/statewalker/webrun-puppeteer",
+  "author": {
+    "name": "Mikhail Kotelnikov",
+    "email": "mikhail.kotelnikov@gmail.com"
+  },
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "dist/**/package.json",
+    "dist/**/*.js"
+  ],
+  "module": "dist/index.js",
+  "main": "dist/index.js",
+  "jsdelivr": "dist/index.js",
+  "unpkg": "dist/index.js",
+  "exports": {
+    "default": "./dist/index.js"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.254",
+    "puppeteer-core": "^13.7.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:statewalker/webrun-puppeteer.git"
+  },
+  "scripts": {
+    "eslint": "eslint src",
+    "build": "vite build",
+    "test": "mocha -R spec ./test/index.js && yarn eslint",
+    "prepublishOnly": "rm -rf dist && yarn test && yarn rollup"
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  }
+}
